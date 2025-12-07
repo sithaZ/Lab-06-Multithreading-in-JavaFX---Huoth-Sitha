@@ -1,0 +1,5 @@
+com\example\threadmanager\controller\Controller$GeneratorTask.class
+com\example\threadmanager\controller\Controller$PrimeGeneratorTask.class
+com\example\threadmanager\controller\Controller$FibonacciGeneratorTask.class
+com\example\threadmanager\App.class
+com\example\threadmanager\controller\Controller.class
