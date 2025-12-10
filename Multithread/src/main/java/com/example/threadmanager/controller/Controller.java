@@ -85,7 +85,11 @@ public class Controller {
         primeTask.setOnFailed(e -> primeStatusLabel.setText("Error"));
         
         setButtonState(true, true, false, true, true, "prime");
-        new Thread(primeTask).start();
+        
+        // MODIFIED: Set as Daemon thread
+        Thread thread = new Thread(primeTask);
+        thread.setDaemon(true);
+        thread.start();
     }
 
     // --- Fibonacci Actions ---
@@ -147,7 +151,11 @@ public class Controller {
         fibTask.setOnFailed(e -> fibStatusLabel.setText("Error"));
 
         setButtonState(true, true, false, true, true, "fib");
-        new Thread(fibTask).start();
+        
+        // MODIFIED: Set as Daemon thread
+        Thread thread = new Thread(fibTask);
+        thread.setDaemon(true);
+        thread.start();
     }
 
     private void setButtonState(boolean running, boolean canPause, boolean canResume, boolean canStop, boolean canRestart, String type) {
